@@ -10,5 +10,7 @@ class Persona {
 	Date fechaNacimiento
 
     static constraints = {
+		telefono nullable: true
+		email nullable: true
     }
 }
