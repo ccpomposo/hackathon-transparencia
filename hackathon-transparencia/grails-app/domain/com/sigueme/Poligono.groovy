@@ -1,6 +1,6 @@
 package com.sigueme
 
-class Poligonos {
+class Poligono {
 
 	String nombre
 	String entidad
