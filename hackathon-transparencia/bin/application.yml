@@ -94,9 +94,9 @@ hibernate:
 dataSource:
     pooled: true
     jmxExport: true
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''
+    driverClassName:  org.postgresql.Driver
+    username: administrador
+    password: administrador
 
 environments:
     development:
@@ -129,3 +129,7 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+
+server:
+    contextPath: /Sigueme
+    port: 9191
