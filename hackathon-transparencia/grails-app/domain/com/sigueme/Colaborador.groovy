@@ -4,8 +4,8 @@ class Colaborador {
 
 	Persona persona 
 	Sujeto sujeto 
-	DAte fechaRegistro
-	
+	Date fechaRegistro
+
     static constraints = {
     }
 }

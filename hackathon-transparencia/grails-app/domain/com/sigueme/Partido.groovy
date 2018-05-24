@@ -5,7 +5,7 @@ class Partido {
     String nombre
     String descripcion
 
-    static hasMany = [canditados: Canditado]
+    static hasMany = [candidato: Candidato]
 
     static constraints = {
         descripcion nullable: true
