@@ -8,6 +8,7 @@ class Movimiento {
 	Poligono poligono 
 	Programa programa 
 	Date fecha
+	Double importe
 
     static constraints = {
     }

@@ -15,7 +15,7 @@ class CandidatoController {
         params.max = Math.min(params.max ? params.int('max') : 5, 100)
  
         
-        def results = Candidato.findAllByPersona(Persona.findByNombreOrPaternoOrMaternoByLike("%${params.query}%".toString(),"%${params.query}%".toString(),"%${params.query}%".toString()))
+        def results = Candidato.findAllByPersona(Persona.findByNombreOrApPaternoOrApMaternoLike("%${params.query}%".toString(),"%${params.query}%".toString(),"%${params.query}%".toString()))
  
         [results: results, totalResults: results.totalCount]
     }
