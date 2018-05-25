@@ -70,8 +70,8 @@
                                 </ul>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="propuestas.png" width="25" height="20"/> - <span class="hide-menu">Propuestas</span></a>
                                 <ul aria-expanded="false" class="collapse">
-                                    <li><a href="${createLink(uri: '/propuesta/index')">Ver Propuestas</a></li>
-                                    <li><a href="index4.html">Agregar</a></li>
+                                    <li><a href="${createLink(uri: '/propuesta/index')}">Ver Propuestas</a></li>
+                                    <li><a href="${createLink(uri: '/propuesta/create')}">Agregar</a></li>
                                     <li><a href="index5.html">Editar</a></li>
                                 </ul>
                             </li>
