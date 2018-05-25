@@ -28,10 +28,7 @@
                 <a class="nav-link" href="${createLink(uri: '/')}">Inicio<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="${createLink(uri: '/reservar/create')}">Buscar Candidato<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="${createLink(uri: '/reservar/create')}">Buscar Institucion<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="${createLink(uri: '/reservar/create')}">Buscar<span class="sr-only">(current)</span></a>
               </li>
             </ul>
           </div>

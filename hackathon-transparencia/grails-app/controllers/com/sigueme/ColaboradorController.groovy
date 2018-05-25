@@ -2,10 +2,8 @@ package com.sigueme
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
-import grails.plugin.springsecurity.annotation.Secured
 
-@Secured('ROLE_ADMIN')
-@Transactional(readOnly = false)
+@Transactional(readOnly = true)
 class ColaboradorController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]

@@ -3,6 +3,7 @@
     <head>
         <g:set var="entityName" value="${message(code: 'propuesta.label', default: 'Propuesta')}" />
         <meta name="layout" content="main" />
+<<<<<<< HEAD
         <title>Sigueme - Crear Colaborador</title>
         <asset:link rel="icon" href="icon.ico" type="image/x-ico" />
 
@@ -17,25 +18,12 @@
                 width: 25%;
             }
         </style>
+=======
+        <g:set var="entityName" value="${message(code: 'colaborador.label', default: 'Colaborador')}" />
+        <title><g:message code="default.create.label" args="[entityName]" /></title>
+>>>>>>> d7b19cf23061d81459f7d0aa8510abe60eb882d3
     </head>
     <body>
-
-          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <g:img dir="images" file="iconn.png" width="30" height="30" /> 
-          <div style="width: 20px">
-          </div>
-          <a class="navbar-brand" href="${createLink(uri: '/')}"> Sigueme  |</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="${createLink(uri: '/pantallaSujeto/index.html#!')}">Inicio<span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
         <a href="#create-colaborador" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>

@@ -66,17 +66,20 @@
                                 <ul aria-expanded="false" class="collapse">
                                     <li><a href="${createLink(uri: '/colaborador/index')}">Ver Colaboradores </a></li>
                                     <li><a href="${createLink(uri: '/colaborador/create')}">Agregar </a></li>
+<<<<<<< HEAD
                                     <li><a href="index2.html">Editar </a></li>
+=======
+>>>>>>> d7b19cf23061d81459f7d0aa8510abe60eb882d3
                                 </ul>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="propuestas.png" width="25" height="20"/> - <span class="hide-menu">Propuestas</span></a>
                                 <ul aria-expanded="false" class="collapse">
                                     <li><a href="${createLink(uri: '/propuesta/index')}">Ver Propuestas</a></li>
                                     <li><a href="${createLink(uri: '/propuesta/create')}">Agregar</a></li>
-                                    <li><a href="index5.html">Editar</a></li>
                                 </ul>
                             </li>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="agenda.png" width="20" height="20"/> - <span class="hide-menu">Programas</span></a>
                                 <ul aria-expanded="false" class="collapse">
+<<<<<<< HEAD
                                     <li><a href="chart-flot.html">Desarrollo Social</a></li>
                                     <li><a href="chart-morris.html">Infraestructura</a></li>
                                     <li><a href="chart-chartjs.html">ChartJs</a></li>
@@ -87,6 +90,41 @@
                                     <li><a href="chart-peity.html">Peity</a></li>
                                 </ul>
                             </li>
+=======
+                                    <li><a href="${createLink(uri: '/programa/index')}">Ver Programas</a></li>
+                                    <li><a href="${createLink(uri: '/programa/create')}">Agregar</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> 
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> 
+                                <a href="${request.getContextPath()}/logoff" aria-expanded="false"><g:img dir="images" file="cerrar.png" width="20" height="20"/> - <span class="hide-menu">Cerrar Sesión</span></a>
+                            </li>
+>>>>>>> d7b19cf23061d81459f7d0aa8510abe60eb882d3
 
                         </ul>
                     </nav>

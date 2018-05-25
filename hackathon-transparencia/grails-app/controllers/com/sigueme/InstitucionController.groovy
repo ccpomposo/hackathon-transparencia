@@ -21,6 +21,14 @@ class InstitucionController {
         respond new Institucion(params)
     }
 
+    def list() {
+        params.max = Math.min(params.max ? params.int('max') : 5, 100)
+ 
+        def results = Candidato.findAllByPersona(Persona.findByNombreOrPaternoOrMaternoByLike("%${params.query}%"))
+ 
+        [results: results, totalResults: results.totalCount]
+    }
+
     @Transactional
     def save(Institucion institucion) {
         if (institucion == null) {
