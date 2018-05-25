@@ -65,7 +65,7 @@
                             <li> <a class="has-arrow " href="#" aria-expanded="false"><g:img dir="images" file="colaborador.png" width="25" height="20"/> - <span class="hide-menu">Colaboradores</span></a>
                                 <ul aria-expanded="false" class="collapse">
                                     <li><a href="index.html">Ver Colaboradores </a></li>
-                                    <li><a href="${createLink(uri: '/colaborador/create#!')}">Agregar </a></li>
+                                    <li><a href="index1.html">Agregar </a></li>
                                     <li><a href="index2.html">Editar </a></li>
                                 </ul>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="propuestas.png" width="25" height="20"/> - <span class="hide-menu">Propuestas</span></a>
