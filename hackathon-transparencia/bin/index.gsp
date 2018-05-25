@@ -1,79 +1,75 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="layout" content="main"/>
-    <title>Welcome to Grails</title>
+    <title>Sigueme</title>
+    <asset:link rel="icon" href="icon.ico" type="image/x-ico" />
 
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
+    <asset:stylesheet src="style.css"/>
+    <asset:stylesheet src="bootstrap.css"/>
+    <asset:stylesheet src="animate.css"/>
+    <asset:stylesheet src="owl.carousel.min.css"/>
+    <asset:stylesheet src="magnific-popup.css"/>
+    <asset:stylesheet src="miEstilo.css"/>
+
+
+    <style>
+        h1 {
+            color: white;
+        }
+
+        body {
+            background-color: #343a40;
+            margin: 0px; padding: 0pxy
+        }
+
+        footer {
+            position:fixed;
+        }
+
+        .container {
+            opacity: 0.8;
+        }
+
+        html { 
+            overflow-x:hidden; 
+        }
+
+        .navbar{
+            height: 30px;
+        }
+    </style>
 </head>
 <body>
-    <content tag="nav">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>
-                <li><a href="#">App profile: ${grailsApplication.config.grails?.profile}</a></li>
-                <li><a href="#">App version:
-                    <g:meta name="info.app.version"/></a>
-                </li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Grails version:
-                    <g:meta name="info.app.grailsVersion"/></a>
-                </li>
-                <li><a href="#">Groovy version: ${GroovySystem.getVersion()}</a></li>
-                <li><a href="#">JVM version: ${System.getProperty('java.version')}</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artefacts <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Controllers: ${grailsApplication.controllerClasses.size()}</a></li>
-                <li><a href="#">Domains: ${grailsApplication.domainClasses.size()}</a></li>
-                <li><a href="#">Services: ${grailsApplication.serviceClasses.size()}</a></li>
-                <li><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                    <li><a href="#">${plugin.name} - ${plugin.version}</a></li>
-                </g:each>
-            </ul>
-        </li>
-    </content>
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    </nav>
 
-    <div class="svg" role="presentation">
-        <div class="grails-logo-container">
-            <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
-        </div>
-    </div>
+    <section class="site-hero site-hero-innerpage" data-stellar-background-ratio="0.5" style="background-image: url('${resource(dir: "images", file: "banner-hotel.jpg")}');">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+            <center>
+                    <div class="container">
+                        <h1> Bienvenido </h1>
+                        <p>
+                            <center>
+                                <a href="${createLink(uri: '/reserva/create')}" class="btn btn-secondary" role="button">
+                                Buscar Candidato &raquo;
+                                </a>  
+                                <a href="${createLink(uri: '/reserva/index')}" class="btn btn-secondary" role="button">
+                                Buscar Institucion &raquo;
+                                </a>   
+                                <a href="${request.getContextPath()}/logoff" class="btn btn-secondary" role="button">
+                                Contáctenos &raquo;
+                                </a>
+                            </center>
+                        </p>
+                    </div>
+            </center>
+      </div>
+    </section>
 
-    <div id="content" role="main">
-        <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
-
-            <p>
-                Congratulations, you have successfully started your first Grails application! At the moment
-                this is the default page, feel free to modify it to either redirect to a controller or display
-                whatever content you may choose. Below is a list of controllers that are currently deployed in
-                this application, click on each to execute its default action:
-            </p>
-
-            <div id="controllers" role="navigation">
-                <h2>Available Controllers:</h2>
-                <ul>
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                        <li class="controller">
-                            <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                        </li>
-                    </g:each>
-                </ul>
-            </div>
-        </section>
-    </div>
-
+    <footer>
+        <center>
+        <p>Copyright &copy; 2018, Corporación Sigueme, S.A. de C.V.  All rights reserved. &middot; Hackathon 2018</p>
+            </center>
+    </footer>
 </body>
 </html>

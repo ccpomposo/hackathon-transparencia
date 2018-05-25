@@ -24,5 +24,38 @@
                 <g:paginate total="${poligonoCount ?: 0}" />
             </div>
         </div>
-    </body>
+        <button type="button" id="btnTest">Test</button>
+        <div id="test"></div>
+        <script>
+                $(document).ready(function() {
+                    
+                    $("#btnTest").on('click', function(){
+                        $.ajax({
+                            url: "${createLink(uri: '/Poligono/getPuntos')}",
+                            type: "GET",
+                            data: {
+                                estado: "oaxaca"
+                            },
+                            success: function(data) {
+                                var myJSON = JSON.stringify(data);
+                                console.log("Ahí va el data datito" + " " + myJSON);             
+                                for(datito in data) {
+                                    console.log(datito);
+                                    console.log(data[datito]);
+                                    for(datitito in datito) {
+                                        console.log(datitito);
+                                        console.log(data[datito][datitito]);
+                                    }
+                                }
+                                console.log('Ya llegó el datito')
+                            },
+                            error: function() {
+                                console.log('No, nada, nel');
+                            }
+                        })    
+                    })
+                });
+                </script>
+    </body>    
 </html>
+

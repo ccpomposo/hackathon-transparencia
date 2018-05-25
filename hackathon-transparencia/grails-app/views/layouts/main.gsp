@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <asset:stylesheet src="application.css"/>
+    <asset:javascript src="jquery-3.2.1.min.js"/>
 
     <g:layoutHead/>
 </head>
