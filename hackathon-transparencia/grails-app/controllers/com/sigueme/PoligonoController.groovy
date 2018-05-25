@@ -8,6 +8,35 @@ class PoligonoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def getPuntos() {
+        String tipo = params.tipo
+        Integer estado = params.estado
+        Integer clave = params.clave
+        System.out.println(estado)
+        def db = [url:'jdbc:postgresql://localhost:25565/transparencia_db', user:'administrador', password:'administrador', driver:'org.postgresql.Driver']
+        def sql = Sql.newInstance(db.url, db.user, db.password, db.driver)   
+        String query
+        def resultSet
+        if (tipo.compareTo("estado") == 0) {
+            query = 'select punto_id, x, y, polygonnumber from entidades where idd = ?'
+            resultSet = sql.rows(query, estado)
+        } else if(tipo.compareTo("distrito local") == 0) {
+            query = 'select id punto_id, x, y, (select 0) polygonnumber from distritoslocales where entidad = ? and distrito = ?'
+            resultSet = sql.rows(query, estado, clave)
+        } else if(tipo.compareTo("distrito federal") == 0) {
+            query = 'select idpunto punto_id, x, y, (select 0) polygonnumber from distritoslocales where entidad = ? and distrito = ?'
+            resultSet = sql.rows(query, estado, clave)
+        } else if(tipo.compareTo("municipio") == 0) {
+            query = 'select id punto_id, x, y, polygonnumber from distritoslocales where entidad = ? and municipio = ?'
+            resultSet = sql.rows(query, estado, clave)
+        } else if(tipo.compareTo("seccion") == 0) {
+            query = 'select id punto_id, x, y, polygonnumber from distritoslocales where entidad = ? and seccion = ?'
+            resultSet = sql.rows(query, estado, clave)
+        }
+        sql.close()
+        render resultSet as JSON
+    }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Poligono.list(params), model:[poligonoCount: Poligono.count()]
