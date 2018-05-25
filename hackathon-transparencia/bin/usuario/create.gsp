@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <g:set var="entityName" value="${message(code: 'propuesta.label', default: 'Propuesta')}" />
         <meta name="layout" content="main" />
+        <g:set var="entityName" value="${message(code: 'usuario.label', default: 'Usuario')}" />
         <title>Sigueme - Crear Usuario</title>
         <asset:link rel="icon" href="icon.ico" type="image/x-ico" />
 
@@ -20,7 +20,7 @@
     </head>
     <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <g:img dir="images" file="iconn.png" width="30" height="30" /> 
           <div style="width: 20px">
           </div>
@@ -31,39 +31,41 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="${createLink(uri: '/pantallaSujeto/index.html#!')}">Inicio<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="${createLink(uri: '/')}">Inicio<span class="sr-only">(current)</span></a>
               </li>
             </ul>
           </div>
         </nav>
 
-        <a href="#create-propuesta" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+
+        <a href="#create-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
-        <div id="create-propuesta" class="content scaffold-create" role="main">
-            <h1><g:message code="default.create.label" args="[entityName]" /></h1>
-            <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
-            </g:if>
-            <g:hasErrors bean="${this.propuesta}">
-            <ul class="errors" role="alert">
-                <g:eachError bean="${this.propuesta}" var="error">
-                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-                </g:eachError>
-            </ul>
-            </g:hasErrors>
-            <g:form resource="${this.propuesta}" method="POST">
+        <div id="create-usuario" class="content scaffold-create" role="main">
+            <h1> Crear Usuario</h1>
+
+            <g:form resource="${this.usuario}" method="POST">
                 <fieldset class="form">
-                    <f:all bean="propuesta"/>
+                    <f:with bean="usuario">
+                        <f:field property= "username"/> 
+                        <f:field property= "password" />
+                    </f:with>
                 </fieldset>
-                <fieldset class="buttons">
-                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-                </fieldset>
+
+                <div style="float:left; margin: 5px 20px 0 50px;">
+                   <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                </div>
             </g:form>
         </div>
+        <footer>
+            <center>
+            <p>Copyright &copy; 2018, Corporación CesarMC96, S.A. de C.V.  All rights reserved. &middot; Programacion Web II</p>
+                </center>
+      </footer>
     </body>
 </html>
+
