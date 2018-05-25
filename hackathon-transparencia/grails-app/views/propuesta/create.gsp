@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'propuesta.label', default: 'Propuesta')}" />
-        <title><g:message code="default.create.label" args="[entityName]" /></title>
+        <meta name="layout" content="main" />
+        <title>Sigueme - Crear Usuario</title>
+        <asset:link rel="icon" href="icon.ico" type="image/x-ico" />
+
+        <style>
+            footer {
+                position:fixed;
+            }
+
+            .fieldcontain label, .fieldcontain .property-label {
+                color: #ffffff;
+                text-align: right;
+                width: 25%;
+            }
+        </style>
     </head>
     <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <g:img dir="images" file="iconn.png" width="30" height="30" /> 
+          <div style="width: 20px">
+          </div>
+          <a class="navbar-brand" href="${createLink(uri: '/')}"> Sigueme  |</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="${createLink(uri: '/')}">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
         <a href="#create-propuesta" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
