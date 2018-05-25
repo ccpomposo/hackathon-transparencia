@@ -6,6 +6,23 @@
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
     </head>
     <body>
+
+          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <g:img dir="images" file="iconn.png" width="30" height="30" /> 
+          <div style="width: 20px">
+          </div>
+          <a class="navbar-brand" href="${createLink(uri: '/')}"> Sigueme  |</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="${createLink(uri: '/')}">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <a href="#edit-colaborador" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
