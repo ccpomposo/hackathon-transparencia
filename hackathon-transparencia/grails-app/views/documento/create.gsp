@@ -1,4 +1,4 @@
-<%@ page import="com.siguemeDocumento" %>
+<%@ page import="com.sigueme.Documento" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,7 +17,7 @@
                     <input type="file" name="file" />
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="upload" class="save" value="Upload" />
+					<g:submitButton name="upload" class="save" value="Subir archivo" />
 				</fieldset>
 			</g:uploadForm>
 		</div>
