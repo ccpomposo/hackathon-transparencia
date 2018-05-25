@@ -24,14 +24,6 @@ class ProgramaController {
         respond new Programa(params)
     }
 
-    def list() {
-        params.max = Math.min(params.max ? params.int('max') : 5, 100)
- 
-        def results = Programa.findAllByNombreOrDescripcion("%${params.query}%")
- 
-        [results: results, totalResults: results.totalCount]
-    }
-
     @Transactional
     def save(Programa programa) {
         if (programa == null) {

@@ -5,93 +5,93 @@ import grails.transaction.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 import com.sigueme.*
 
-@Secured('ROLE_ADMIN')
+@Secured('permitAll')
 @Transactional(readOnly = false)
-class ProgramaController {
+class UsuarioController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Programa.list(params), model:[programaCount: Programa.count()]
+        respond Usuario.list(params), model:[usuarioCount: Usuario.count()]
     }
 
-    def show(Programa programa) {
-        respond programa
+    def show(Usuario usuario) {
+        respond usuario
     }
 
     def create() {
-        respond new Programa(params)
+        respond new Usuario(params)
     }
 
     @Transactional
-    def save(Programa programa) {
-        if (programa == null) {
+    def save(Usuario usuario) {
+        if (usuario == null) {
             transactionStatus.setRollbackOnly()
             notFound()
             return
         }
 
-        if (programa.hasErrors()) {
+        if (usuario.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond programa.errors, view:'create'
+            respond usuario.errors, view:'create'
             return
         }
 
-        programa.save flush:true
+        usuario.save flush:true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'programa.label', default: 'Programa'), programa.id])
-                redirect programa
+                flash.message = message(code: 'default.created.message', args: [message(code: 'usuario.label', default: 'Usuario'), usuario.id])
+                redirect usuario
             }
-            '*' { respond programa, [status: CREATED] }
+            '*' { respond usuario, [status: CREATED] }
         }
     }
 
-    def edit(Programa programa) {
-        respond programa
+    def edit(Usuario usuario) {
+        respond usuario
     }
 
     @Transactional
-    def update(Programa programa) {
-        if (programa == null) {
+    def update(Usuario usuario) {
+        if (usuario == null) {
             transactionStatus.setRollbackOnly()
             notFound()
             return
         }
 
-        if (programa.hasErrors()) {
+        if (usuario.hasErrors()) {
             transactionStatus.setRollbackOnly()
-            respond programa.errors, view:'edit'
+            respond usuario.errors, view:'edit'
             return
         }
 
-        programa.save flush:true
+        usuario.save flush:true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'programa.label', default: 'Programa'), programa.id])
-                redirect programa
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'usuario.label', default: 'Usuario'), usuario.id])
+                redirect usuario
             }
-            '*'{ respond programa, [status: OK] }
+            '*'{ respond usuario, [status: OK] }
         }
     }
 
     @Transactional
-    def delete(Programa programa) {
+    def delete(Usuario usuario) {
 
-        if (programa == null) {
+        if (usuario == null) {
             transactionStatus.setRollbackOnly()
             notFound()
             return
         }
 
-        programa.delete flush:true
+        usuario.delete flush:true
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'programa.label', default: 'Programa'), programa.id])
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), usuario.id])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
@@ -101,7 +101,7 @@ class ProgramaController {
     protected void notFound() {
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'programa.label', default: 'Programa'), params.id])
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'usuario.label', default: 'Usuario'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }

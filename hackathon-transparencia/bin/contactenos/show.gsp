@@ -7,8 +7,12 @@
 
         <style>
             body{
-               background-image: url('${resource(dir: "images", file: "banner1.jpg")}');
+               background-image: url('${resource(dir: "images", file: "banner.jpg")}');
 
+            }
+
+            footer {
+                position:fixed;
             }
         </style>
     </head>
@@ -37,42 +41,13 @@
           </div>
         </nav>
 
-
         <div class="container marketing">
             <h1> Contáctanos </h1>
             <p> ¿Dudas o comentarios? ¡Contáctanos! Utiliza nuestro formulario en línea o ponte en contacto con nuestros ejecutivos. </p>
-            <p> Teléfono: 01 (951) 178 1634 <br> Lada Sin Costo: 01 (800) 515 5625 <br> Correo electrónico: siguemeoficial@gmail.com </p>
-
-            <div class="container">
-                <g:form class="form-signin" controller="contactenos" action="show">
-                <p>
-                  <h6> Nombre </h6>
-                  <input type="text" class="form-control" placeholder="Ej. C&eacute;sar" required >
-                </p>
-
-                <p>
-                  <h6> Direccion de Correo </h6>
-                  <label for="inputEmail" class="sr-only">Dirreccion de Correo</label>
-                      <input type="email" id="inputEmail" class="form-control" placeholder="Ej. Cesarmc96@hotmail.com" required >
-                </p>
-
-                <p>
-                  <h6> Mensaje </h6>
-                  <textarea class="form-control" required > </textarea>
-                    <br>
-                </p>
-                    
-                
-                <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Acepto Terminos y Condiciones
-                        </label>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
-                </g:form>
-            </div>
+            <p> Teléfono: 01 (951) 178 1634 <br> Lada Sin Costo: 01 (800) 717 9050 <br> Correo electrónico: reservacionestiahuanaca@gmail.com </p>
+            <br> <br> <br>
+            <center> <h2> Mensaje Enviado Correctamente. </h2> </center>
         </div>
-
     <footer>
         <center>
         <p>Copyright &copy; 2018, Corporación Sigueme, S.A. de C.V.  All rights reserved. &middot; Hackathon 2018</p>

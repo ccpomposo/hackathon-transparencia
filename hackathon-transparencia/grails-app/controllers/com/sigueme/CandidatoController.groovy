@@ -13,14 +13,6 @@ class CandidatoController {
         respond Candidato.list(params), model:[candidatoCount: Candidato.count()]
     }
 
-    def list() {
-        params.max = Math.min(params.max ? params.int('max') : 5, 100)
- 
-        def results = Institucion.findAllByNombreOrDescripcionOrTitular("%${params.query}%")
- 
-        [results: results, totalResults: results.totalCount]
-    }
-
     def show(Candidato candidato) {
         respond candidato
     }
