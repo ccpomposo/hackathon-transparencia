@@ -68,26 +68,26 @@
                                     <li><a href="index1.html">Agregar </a></li>
                                     <li><a href="index2.html">Editar </a></li>
                                 </ul>
-                            
+                            <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="propuestas.png" width="25" height="20"/> - <span class="hide-menu">Propuestas</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="${createLink(uri: '/propuesta/index')}">Ver Propuestas</a></li>
+                                    <li><a href="${createLink(uri: '/propuesta/create')}">Agregar</a></li>
+                                    <li><a href="index5.html">Editar</a></li>
+                                </ul>
+                            </li>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="agenda.png" width="20" height="20"/> - <span class="hide-menu">Programas</span></a>
                                 <ul aria-expanded="false" class="collapse">
-                                    <li><a href="chart-flot.html">Pensiones y jubilaciones</a></li>
-                                    <li><a href="chart-morris.html">Seguridad social</a></li>
-                                    <li><a href="chart-chartjs.html">Fondos de estabilización</a></li>
-                                    <li><a href="chart-chartist.html">Fondos de inversión</a></li>
-                                    <li><a href="chart-amchart.html">Mejoramiento de gestión pública</a></li>
-                                    <li><a href="chart-echart.html">Apoyo a la eficiencia institucional</a></li>
-                                    <li><a href="chart-sparkline.html">Desastres naturales</a></li>
-                                    <li><a href="chart-peity.html">Fuerzas armadas</a></li>
-                                    <li><a href="chart-peity.html">Prestación de servicios públicos</a></li>
-                                    <li><a href="chart-peity.html">Promoción y fomento</a></li>
+                                    <li><a href="chart-flot.html">Desarrollo Social</a></li>
+                                    <li><a href="chart-morris.html">Infraestructura</a></li>
+                                    <li><a href="chart-chartjs.html">ChartJs</a></li>
+                                    <li><a href="chart-chartist.html">Chartist </a></li>
+                                    <li><a href="chart-amchart.html">AmChart</a></li>
+                                    <li><a href="chart-echart.html">EChart</a></li>
+                                    <li><a href="chart-sparkline.html">Sparkline</a></li>
+                                    <li><a href="chart-peity.html">Peity</a></li>
                                 </ul>
                             </li>
-                            <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="propuestas.png" width="25" height="20"/> - <span class="hide-menu">Gasto no programable</span></a>
-                                <ul aria-expanded="false" class="collapse">
-                                    <li><a href="${createLink(uri: '/gastoNoProgramable/index')">Ver Detalles</a></li>
-                                </ul>
-                            </li>
+
                         </ul>
                     </nav>
                     <!-- End Sidebar navigation -->
