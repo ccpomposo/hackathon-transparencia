@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <g:set var="entityName" value="${message(code: 'propuesta.label', default: 'Propuesta')}" />
         <meta name="layout" content="main" />
-        <title>Sigueme - Crear Colaborador</title>
-        <asset:link rel="icon" href="icon.ico" type="image/x-ico" />
+        <g:set var="entityName" value="${message(code: 'colaborador.label', default: 'Colaborador')}" />
+        <title><g:message code="default.create.label" args="[entityName]" /></title>
+            <asset:link rel="icon" href="icon.ico" type="image/x-ico" />
 
-        <style>
+          <style>
             footer {
                 position:fixed;
             }
@@ -59,9 +59,9 @@
                 <fieldset class="form">
                     <f:all bean="colaborador"/>
                 </fieldset>
-                  <div style="float:left; margin: 5px 20px 0 50px;">
-                   <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-                </div>
+                <fieldset class="buttons">
+                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                </fieldset>
             </g:form>
         </div>
     </body>
