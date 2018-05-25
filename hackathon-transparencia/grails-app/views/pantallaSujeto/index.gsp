@@ -5,7 +5,6 @@
         <g:set var="entityName" value="${message(code: 'pantallaSujeto.label', default: 'PantallaSujeto')}" />
         <title>Sigueme Administrador</title>
 
-<!--
         <asset:stylesheet src="bootstrap.min.css"/>
         <asset:stylesheet src="semantic.ui.min.css"/>
         <asset:stylesheet src="miEstilo.css"/>
@@ -13,8 +12,7 @@
         <asset:stylesheet src="owl.carousel.min.css"/>
         <asset:stylesheet src="owl.theme.default.min.css"/>
         <asset:stylesheet src="helper.css"/>
-        <asset:stylesheet src="style.css"/>
-
+        <asset:stylesheet src="style1.css"/>
 
         <asset:javascript src="jquery.min.js"/>
         <asset:javascript src="popper.min.js"/>
@@ -35,7 +33,6 @@
         <asset:javascript src="owl.carousel-init.js"/>
         <asset:javascript src="scripts.js"/>
         <asset:javascript src="custom.min.js"/>
--->
     </head>
 
     <body class="fix-header fix-sidebar">

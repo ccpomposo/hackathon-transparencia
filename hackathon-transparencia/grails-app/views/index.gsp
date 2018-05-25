@@ -54,11 +54,9 @@
                         <h1> Bienvenido </h1>
                         <p>
                             <center>
-                                <a href="${createLink(uri: '/reserva/create')}" class="btn btn-secondary" role="button">
-                                Buscar Candidato &raquo;
-                                </a>  
+                                <input type="text" class="form-control" placeholder="" required >
                                 <a href="${createLink(uri: '/reserva/index')}" class="btn btn-secondary" role="button">
-                                Buscar Institucion &raquo;
+                                Buscar &raquo;
                                 </a>   
                                 <a href="${createLink(uri: '/contactenos/index')}" class="btn btn-secondary" role="button">
                                 Contáctenos &raquo;
