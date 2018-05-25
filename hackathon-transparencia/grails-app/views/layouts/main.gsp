@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <asset:stylesheet src="application.css"/>
+<<<<<<< HEAD
     <asset:stylesheet src="bootstrap.css"/>
     <asset:stylesheet src="miEstilo.css"/>
     <asset:stylesheet src="datatables.css"/>
@@ -24,6 +25,9 @@
             $('#example').DataTable();
         });
     </script>
+=======
+
+>>>>>>> parent of 5284b39... Puntos del mapa
     <g:layoutHead/>
 </head>
 <body>
