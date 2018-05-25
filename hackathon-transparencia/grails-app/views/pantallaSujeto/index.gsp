@@ -64,23 +64,20 @@
                             <li class="nav-label">Home</li>
                             <li> <a class="has-arrow " href="#" aria-expanded="false"><g:img dir="images" file="colaborador.png" width="25" height="20"/> - <span class="hide-menu">Colaboradores</span></a>
                                 <ul aria-expanded="false" class="collapse">
-                                    <li><a href="index.html">Ver Colaboradores </a></li>
-                                    <li><a href="index1.html">Agregar </a></li>
-                                    <li><a href="index2.html">Editar </a></li>
+                                    <li><a href="${createLink(uri: '/colaborador/index')}">Ver Colaboradores </a></li>
+                                    <li><a href="${createLink(uri: '/colaborador/create')}">Agregar </a></li>
                                 </ul>
-                            </li>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="propuestas.png" width="25" height="20"/> - <span class="hide-menu">Propuestas</span></a>
                                 <ul aria-expanded="false" class="collapse">
                                     <li><a href="${createLink(uri: '/propuesta/index')}">Ver Propuestas</a></li>
                                     <li><a href="${createLink(uri: '/propuesta/create')}">Agregar</a></li>
-                                    <li><a href="index5.html">Editar</a></li>
                                 </ul>
                             </li>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="agenda.png" width="20" height="20"/> - <span class="hide-menu">Programas</span></a>
                                 <ul aria-expanded="false" class="collapse">
+<<<<<<< HEAD
                                     <li><a href="${createLink(uri: '/programa/index')}">Ver Programas</a></li>
                                     <li><a href="${createLink(uri: '/programa/create')}">Agregar</a></li>
-                                    <li><a href="index6.html">Editar</a></li>
                                 </ul>
                             </li>
                             
@@ -90,9 +87,41 @@
                             <li> <a href="#" aria-expanded="false"></a>
                                 
                             </li>
-                            <li> 
-                                <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="cerrar.png" width="20" height="20"/> - <span class="hide-menu">Cerrar Sesión</span></a>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
                             </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> 
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> 
+                                <a href="${request.getContextPath()}/logoff" aria-expanded="false"><g:img dir="images" file="cerrar.png" width="20" height="20"/> - <span class="hide-menu">Cerrar Sesión</span></a>
+                            </li>
+=======
+                                    <li><a href="chart-flot.html">Desarrollo Social</a></li>
+                                    <li><a href="chart-morris.html">Infraestructura</a></li>
+                                    <li><a href="chart-chartjs.html">ChartJs</a></li>
+                                    <li><a href="chart-chartist.html">Chartist </a></li>
+                                    <li><a href="chart-amchart.html">AmChart</a></li>
+                                    <li><a href="chart-echart.html">EChart</a></li>
+                                    <li><a href="chart-sparkline.html">Sparkline</a></li>
+                                    <li><a href="chart-peity.html">Peity</a></li>
+                                </ul>
+                            </li>
+
+>>>>>>> c579a01a1337ad38590cd8461cb9791f662d8b1c
                         </ul>
                     </nav>
                     <!-- End Sidebar navigation -->
