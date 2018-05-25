@@ -72,6 +72,10 @@
     footer {
         position:fixed;
     }
+
+    .hoal {
+        color: white;
+    }
     </style>
 
 </head>
@@ -121,7 +125,14 @@
             <p>
                 <input type="submit" id="submit" value="${message(code: 'springSecurity.login.button')}"/>
             </p>
+            
+            <center>
+                <a  class="hoal" href="${createLink(uri: '/usuario/create')}" role="button">
+                    Crear Cuenta &raquo;
+                </a>  
+            </center> 
         </form>
+
     </div>
 </div>
 <script>
