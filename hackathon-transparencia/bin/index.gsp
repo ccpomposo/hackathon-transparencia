@@ -35,12 +35,16 @@
         }
 
         .navbar{
-            height: 30px;
         }
     </style>
 </head>
 <body>
      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <form class="form-inline mt-2 mt-md-0">
+            <g:link controller="pantallaSujeto" action="index">
+                <g:img dir="images" file="Usuario.png" width="30" height="30" />
+            </g:link>
+        </form>
     </nav>
 
     <section class="site-hero site-hero-innerpage" data-stellar-background-ratio="0.5" style="background-image: url('${resource(dir: "images", file: "banner-hotel.jpg")}');">
@@ -50,13 +54,11 @@
                         <h1> Bienvenido </h1>
                         <p>
                             <center>
-                                <a href="${createLink(uri: '/reserva/create')}" class="btn btn-secondary" role="button">
-                                Buscar Candidato &raquo;
-                                </a>  
+                                <input type="text" class="form-control" placeholder="" required >
                                 <a href="${createLink(uri: '/reserva/index')}" class="btn btn-secondary" role="button">
-                                Buscar Institucion &raquo;
+                                Buscar &raquo;
                                 </a>   
-                                <a href="${request.getContextPath()}/logoff" class="btn btn-secondary" role="button">
+                                <a href="${createLink(uri: '/contactenos/index')}" class="btn btn-secondary" role="button">
                                 Contáctenos &raquo;
                                 </a>
                             </center>

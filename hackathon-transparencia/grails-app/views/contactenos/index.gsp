@@ -1,28 +1,82 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'contactenos.label', default: 'Contactenos')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <meta name="layout" content="main"/>
+        <title>Sigueme - Contáctanos</title>
+        <asset:link rel="icon" href="icon.ico" type="image/x-ico" />
+
+        <style>
+            body{
+               background-image: url('${resource(dir: "images", file: "banner1.jpg")}');
+
+            }
+        </style>
     </head>
     <body>
-        <a href="#list-contactenos" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-            </ul>
-        </div>
-        <div id="list-contactenos" class="content scaffold-list" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
-            <g:if test="${flash.message}">
-                <div class="message" role="status">${flash.message}</div>
-            </g:if>
-            <f:table collection="${contactenosList}" />
 
-            <div class="pagination">
-                <g:paginate total="${contactenosCount ?: 0}" />
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <g:img dir="images" file="iconn.png" width="30" height="30" /> 
+          <div style="width: 20px">
+          </div>
+          <a class="navbar-brand" href="${createLink(uri: '/')}"> Sigueme  |</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="${createLink(uri: '/')}">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="${createLink(uri: '/reservar/create')}">Buscar Candidato<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="${createLink(uri: '/reservar/create')}">Buscar Institucion<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <div class="container marketing">
+            <h1> Contáctanos </h1>
+            <p> ¿Dudas o comentarios? ¡Contáctanos! Utiliza nuestro formulario en línea o ponte en contacto con nuestros ejecutivos. </p>
+            <p> Teléfono: 01 (951) 178 1634 <br> Lada Sin Costo: 01 (800) 515 5625 <br> Correo electrónico: siguemeoficial@gmail.com </p>
+
+            <div class="container">
+                <g:form class="form-signin" controller="contactenos" action="show">
+                <p>
+                  <h6> Nombre </h6>
+                  <input type="text" class="form-control" placeholder="Ej. C&eacute;sar" required >
+                </p>
+
+                <p>
+                  <h6> Direccion de Correo </h6>
+                  <label for="inputEmail" class="sr-only">Dirreccion de Correo</label>
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Ej. Cesarmc96@hotmail.com" required >
+                </p>
+
+                <p>
+                  <h6> Mensaje </h6>
+                  <textarea class="form-control" required > </textarea>
+                    <br>
+                </p>
+                    
+                
+                <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Acepto Terminos y Condiciones
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
+                </g:form>
             </div>
         </div>
-    </body>
+
+    <footer>
+        <center>
+        <p>Copyright &copy; 2018, Corporación Sigueme, S.A. de C.V.  All rights reserved. &middot; Hackathon 2018</p>
+            </center>
+    </footer>
+</body>
 </html>

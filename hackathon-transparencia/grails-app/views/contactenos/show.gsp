@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'contactenos.label', default: 'Contactenos')}" />
-        <title><g:message code="default.show.label" args="[entityName]" /></title>
+        <meta name="layout" content="main"/>
+        <title>Sigueme - Contáctanos</title>
+        <asset:link rel="icon" href="icon.ico" type="image/x-ico" />
+
+        <style>
+            body{
+               background-image: url('${resource(dir: "images", file: "banner.jpg")}');
+
+            }
+
+            footer {
+                position:fixed;
+            }
+        </style>
     </head>
     <body>
-        <a href="#show-contactenos" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <g:img dir="images" file="iconn.png" width="30" height="30" /> 
+          <div style="width: 20px">
+          </div>
+          <a class="navbar-brand" href="${createLink(uri: '/')}"> Sigueme  |</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="${createLink(uri: '/')}">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="${createLink(uri: '/reservar/create')}">Buscar Candidato<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="${createLink(uri: '/reservar/create')}">Buscar Institucion<span class="sr-only">(current)</span></a>
+              </li>
             </ul>
+          </div>
+        </nav>
+
+        <div class="container marketing">
+            <h1> Contáctanos </h1>
+            <p> ¿Dudas o comentarios? ¡Contáctanos! Utiliza nuestro formulario en línea o ponte en contacto con nuestros ejecutivos. </p>
+            <p> Teléfono: 01 (951) 178 1634 <br> Lada Sin Costo: 01 (800) 717 9050 <br> Correo electrónico: reservacionestiahuanaca@gmail.com </p>
+            <br> <br> <br>
+            <center> <h2> Mensaje Enviado Correctamente. </h2> </center>
         </div>
-        <div id="show-contactenos" class="content scaffold-show" role="main">
-            <h1><g:message code="default.show.label" args="[entityName]" /></h1>
-            <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
-            </g:if>
-            <f:display bean="contactenos" />
-            <g:form resource="${this.contactenos}" method="DELETE">
-                <fieldset class="buttons">
-                    <g:link class="edit" action="edit" resource="${this.contactenos}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-                    <input class="delete" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-                </fieldset>
-            </g:form>
-        </div>
-    </body>
+    <footer>
+        <center>
+        <p>Copyright &copy; 2018, Corporación Sigueme, S.A. de C.V.  All rights reserved. &middot; Hackathon 2018</p>
+            </center>
+    </footer>
+</body>
 </html>

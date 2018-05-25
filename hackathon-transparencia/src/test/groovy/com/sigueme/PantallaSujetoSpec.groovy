@@ -3,7 +3,7 @@ package com.sigueme
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class ContactenosSpec extends Specification implements DomainUnitTest<Contactenos> {
+class PantallaSujetoSpec extends Specification implements DomainUnitTest<PantallaSujeto> {
 
     def setup() {
     }
