@@ -2,6 +2,9 @@ package com.sigueme
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import groovy.sql.Sql
+import groovy.json.JsonBuilder
+import grails.converters.JSON
 
 @Transactional(readOnly = true)
 class PoligonoController {
