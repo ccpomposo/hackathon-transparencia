@@ -75,7 +75,6 @@
                             </li>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="agenda.png" width="20" height="20"/> - <span class="hide-menu">Programas</span></a>
                                 <ul aria-expanded="false" class="collapse">
-<<<<<<< HEAD
                                     <li><a href="${createLink(uri: '/programa/index')}">Ver Programas</a></li>
                                     <li><a href="${createLink(uri: '/programa/create')}">Agregar</a></li>
                                 </ul>
@@ -109,7 +108,6 @@
                             <li> 
                                 <a href="${request.getContextPath()}/logoff" aria-expanded="false"><g:img dir="images" file="cerrar.png" width="20" height="20"/> - <span class="hide-menu">Cerrar Sesión</span></a>
                             </li>
-=======
                                     <li><a href="chart-flot.html">Desarrollo Social</a></li>
                                     <li><a href="chart-morris.html">Infraestructura</a></li>
                                     <li><a href="chart-chartjs.html">ChartJs</a></li>
@@ -121,7 +119,17 @@
                                 </ul>
                             </li>
 
->>>>>>> c579a01a1337ad38590cd8461cb9791f662d8b1c
+                                    <li><a href="chart-flot.html">Desarrollo Social</a></li>
+                                    <li><a href="chart-morris.html">Infraestructura</a></li>
+                                    <li><a href="chart-chartjs.html">ChartJs</a></li>
+                                    <li><a href="chart-chartist.html">Chartist </a></li>
+                                    <li><a href="chart-amchart.html">AmChart</a></li>
+                                    <li><a href="chart-echart.html">EChart</a></li>
+                                    <li><a href="chart-sparkline.html">Sparkline</a></li>
+                                    <li><a href="chart-peity.html">Peity</a></li>
+                                </ul>
+                            </li>
+
                         </ul>
                     </nav>
                     <!-- End Sidebar navigation -->
