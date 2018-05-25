@@ -5,7 +5,7 @@ import grails.transaction.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 import com.sigueme.*
 
-@Secured('ROLE_ADMIN')
+@Secured('ROLE_USUARIO')
 @Transactional(readOnly = false)
 class ProgramaController {
 

@@ -80,6 +80,9 @@
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="agenda.png" width="20" height="20"/> - <span class="hide-menu">Programas</span></a>
                                 <ul aria-expanded="false" class="collapse">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of bac7545... Merge branch 'master' of https://github.com/ccpomposo/hackathon-transparencia
                                     <li><a href="chart-flot.html">Desarrollo Social</a></li>
                                     <li><a href="chart-morris.html">Infraestructura</a></li>
                                     <li><a href="chart-chartjs.html">ChartJs</a></li>
@@ -88,11 +91,14 @@
                                     <li><a href="chart-echart.html">EChart</a></li>
                                     <li><a href="chart-sparkline.html">Sparkline</a></li>
                                     <li><a href="chart-peity.html">Peity</a></li>
+<<<<<<< HEAD
                                 </ul>
                             </li>
 =======
                                     <li><a href="${createLink(uri: '/programa/index')}">Ver Programas</a></li>
                                     <li><a href="${createLink(uri: '/programa/create')}">Agregar</a></li>
+=======
+>>>>>>> parent of bac7545... Merge branch 'master' of https://github.com/ccpomposo/hackathon-transparencia
                                 </ul>
                             </li>
                             
