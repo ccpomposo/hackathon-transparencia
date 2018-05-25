@@ -12,8 +12,11 @@ class ProgramaController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Programa.list(params), model:[programaCount: Programa.count()]
+        params.max = Math.min(params.max ? params.int('max') : 5, 100)
+ 
+        def results = Programa.findAllByNombreOrDescripcion("%${params.query}%".toString(),"%${params.query}%".toString())
+ 
+        [results: results, totalResults: results.totalCount]
     }
 
     def show(Programa programa) {
@@ -22,14 +25,6 @@ class ProgramaController {
 
     def create() {
         respond new Programa(params)
-    }
-
-    def list() {
-        params.max = Math.min(params.max ? params.int('max') : 5, 100)
- 
-        def results = Programa.findAllByNombreOrDescripcion("%${params.query}%")
- 
-        [results: results, totalResults: results.totalCount]
     }
 
     @Transactional

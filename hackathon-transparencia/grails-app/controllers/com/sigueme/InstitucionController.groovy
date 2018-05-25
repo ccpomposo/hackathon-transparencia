@@ -2,15 +2,21 @@ package com.sigueme
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import grails.plugin.springsecurity.annotation.Secured
+import com.sigueme.*
 
-@Transactional(readOnly = true)
+@Secured('ROLE_ADMIN')
+@Transactional(readOnly = false)
 class InstitucionController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Institucion.list(params), model:[institucionCount: Institucion.count()]
+        params.max = Math.min(params.max ? params.int('max') : 5, 100)
+ 
+        def results = Institucion.findAllByNombreOrDescripcionOrTitular("%${params.query}%".toString(),"%${params.query}%".toString(),"%${params.query}%".toString())
+ 
+        [results: results, totalResults: results.totalCount]
     }
 
     def show(Institucion institucion) {
@@ -24,7 +30,7 @@ class InstitucionController {
     def list() {
         params.max = Math.min(params.max ? params.int('max') : 5, 100)
  
-        def results = Candidato.findAllByPersona(Persona.findByNombreOrPaternoOrMaternoByLike("%${params.query}%"))
+        def results = Institucion.findAllByNombreOrDescripcionOrTitular("%${params.query}%".toString(),"%${params.query}%".toString())
  
         [results: results, totalResults: results.totalCount]
     }
