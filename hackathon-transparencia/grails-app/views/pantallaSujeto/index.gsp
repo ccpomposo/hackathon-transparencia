@@ -108,27 +108,6 @@
                             <li> 
                                 <a href="${request.getContextPath()}/logoff" aria-expanded="false"><g:img dir="images" file="cerrar.png" width="20" height="20"/> - <span class="hide-menu">Cerrar Sesión</span></a>
                             </li>
-                                    <li><a href="chart-flot.html">Desarrollo Social</a></li>
-                                    <li><a href="chart-morris.html">Infraestructura</a></li>
-                                    <li><a href="chart-chartjs.html">ChartJs</a></li>
-                                    <li><a href="chart-chartist.html">Chartist </a></li>
-                                    <li><a href="chart-amchart.html">AmChart</a></li>
-                                    <li><a href="chart-echart.html">EChart</a></li>
-                                    <li><a href="chart-sparkline.html">Sparkline</a></li>
-                                    <li><a href="chart-peity.html">Peity</a></li>
-                                </ul>
-                            </li>
-
-                                    <li><a href="chart-flot.html">Desarrollo Social</a></li>
-                                    <li><a href="chart-morris.html">Infraestructura</a></li>
-                                    <li><a href="chart-chartjs.html">ChartJs</a></li>
-                                    <li><a href="chart-chartist.html">Chartist </a></li>
-                                    <li><a href="chart-amchart.html">AmChart</a></li>
-                                    <li><a href="chart-echart.html">EChart</a></li>
-                                    <li><a href="chart-sparkline.html">Sparkline</a></li>
-                                    <li><a href="chart-peity.html">Peity</a></li>
-                                </ul>
-                            </li>
 
                         </ul>
                     </nav>
