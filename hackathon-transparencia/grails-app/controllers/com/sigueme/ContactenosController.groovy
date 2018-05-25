@@ -3,7 +3,7 @@ package com.sigueme
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 import grails.plugin.springsecurity.annotation.Secured
-import Objetos.*
+import com.sigueme.*
 
 @Secured('permitAll')
 @Transactional(readOnly = true)

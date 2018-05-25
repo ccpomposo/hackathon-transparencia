@@ -75,7 +75,7 @@
                                     <li><a href="index5.html">Editar</a></li>
                                 </ul>
                             </li>
-                            <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="agenda.png" width="25" height="20"/> - <span class="hide-menu">Programas</span></a>
+                            <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="agenda.png" width="20" height="20"/> - <span class="hide-menu">Programas</span></a>
                                 <ul aria-expanded="false" class="collapse">
                                     <li><a href="chart-flot.html">Desarrollo Social</a></li>
                                     <li><a href="chart-morris.html">Infraestructura</a></li>
