@@ -68,6 +68,7 @@
                                     <li><a href="index1.html">Agregar </a></li>
                                     <li><a href="index2.html">Editar </a></li>
                                 </ul>
+                            </li>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="propuestas.png" width="25" height="20"/> - <span class="hide-menu">Propuestas</span></a>
                                 <ul aria-expanded="false" class="collapse">
                                     <li><a href="${createLink(uri: '/propuesta/index')}">Ver Propuestas</a></li>
@@ -87,7 +88,16 @@
                                     <li><a href="chart-peity.html">Peity</a></li>
                                 </ul>
                             </li>
-
+                            
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> <a href="#" aria-expanded="false"></a>
+                                
+                            </li>
+                            <li> 
+                                <a class="has-arrow  " href="#" aria-expanded="false"><g:img dir="images" file="cerrar.png" width="20" height="20"/> - <span class="hide-menu">Cerrar Sesión</span></a>
+                            </li>
                         </ul>
                     </nav>
                     <!-- End Sidebar navigation -->
